@@ -44,25 +44,14 @@ What is the total score for all groups in your input?
 
 """
 
-def consume_garbage(garbage: T.Iterator(T.Tuple[int, str])):
+def consume_garbage(garbage: T.Iterator[T.Tuple[int, str]]):
     c = ""
     while c != ">":
         _, c  = next(garbage)
         if c == "!":
-            _, c = ""
+            c = ""
             next(garbage) #skip next char
 
-def groups_inside(group: str, i:int=0) -> Tuple[int, int]:
-    score
-    it = enumerate(group[i:], i)
-    c = ""
-    while c != "}":
-        if c == "}": return score
-        elif c == "<":
-            consume_garbage(it)
-        if c == "{":
-            score += consume_group()
-        
 
 
 
